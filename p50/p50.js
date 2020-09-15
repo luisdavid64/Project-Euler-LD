@@ -55,7 +55,7 @@ const solve = () => {
     var groupedP = group(setsP).filter(element => element[1].length >= 3);
     var solution = [];
     groupedP.forEach(element => {
-        var arr = element[1].sort();
+        var arr = element[1];
         for(var i = 2; i < arr.length; i++) {
             if(arr[i] === (2*arr[i-1] - arr[i-2])) {
                 solution = [arr[i-2],arr[i-1], arr[i]];
